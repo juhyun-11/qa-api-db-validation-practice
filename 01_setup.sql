@@ -84,3 +84,21 @@ VALUES (
     '2026-11-24 12:50:00',
     NULL
 );
+
+-- 연결된 결제 데이터가 없는 주문 검증용 데이터 (RF-06)
+INSERT INTO orders (
+    order_no,
+    member_id,
+    order_status,
+    payment_status,
+    refund_status,
+    cancelled_at
+)
+VALUES (
+    'ORD-TEST-005',
+    999,
+    'CANCELLED',
+    'PAID',
+    NULL,
+    '2026-11-24 09:00:00'
+);
